@@ -1,1 +1,88 @@
-index ht
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Delivery Exception Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Delivery Exception Management Dashboard</h1>
+
+<!-- FILTERS -->
+<div class="filters">
+<label>Filter by Issue Type:</label>
+<select id="filterType">
+<option value="All">All</option>
+<option>Address Not Found</option>
+<option>Customer Not Available</option>
+<option>Payment Issue</option>
+<option>Package Damaged</option>
+</select>
+
+<label>Filter by Status:</label>
+<select id="filterStatus">
+<option value="All">All</option>
+<option value="Open">Open</option>
+<option value="Resolved">Resolved</option>
+</select>
+</div>
+
+<!-- FORM -->
+<h2>Report Delivery Issue</h2>
+
+<form id="issueForm">
+
+<input type="text" id="deliveryId" placeholder="Delivery ID" required>
+
+<input type="text" id="customerName" placeholder="Customer Name" required>
+
+<select id="issueType" required>
+<option value="">Select Issue Type</option>
+<option>Address Not Found</option>
+<option>Customer Not Available</option>
+<option>Payment Issue</option>
+<option>Package Damaged</option>
+</select>
+
+<div class="priority">
+<label>Priority:</label>
+
+<label><input type="radio" name="priority" value="Low">Low</label>
+<label><input type="radio" name="priority" value="Medium">Medium</label>
+<label><input type="radio" name="priority" value="High">High</label>
+</div>
+
+<textarea id="notes" placeholder="Notes (optional)"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<!-- TABLE -->
+<h2>Exceptions Dashboard</h2>
+
+<table id="issuesTable">
+
+<thead>
+<tr>
+<th>Delivery ID</th>
+<th>Customer</th>
+<th>Issue Type</th>
+<th>Priority</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
